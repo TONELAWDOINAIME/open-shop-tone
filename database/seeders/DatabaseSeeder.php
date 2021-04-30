@@ -18,9 +18,11 @@ class DatabaseSeeder extends Seeder
     {
         //\App\Models\User::factory(10)->create(); 
         $this->call([
+            RoleSeeder::class, 
             ProduitSeeder::class,
             CategorySeeder::class, 
-            RoleSeeder::class, 
+            //  20210430 : pour Heroku 
+            //  RoleSeeder::class, 
         ]); 
     }
 }
