@@ -14,13 +14,13 @@ class ProduitSeeder extends Seeder
      */
     public function run()
     {
-        /*$produit = Produit::create([
+        $produit = Produit::create([
             'designation' => "Chemise", 
             'prix' => 5000, 
             'description' => "Ceci est la description de chemise", 
             'quantite' => 50, 
-        ]); */
+        ]); 
         //  Appel du factory dans ProduitSeeder qui est lui même appelé dans DatabaseSeeder. 
-        Produit::factory(500)->create(); 
+        //Produit::factory(500)->create(); 
     }
 }
