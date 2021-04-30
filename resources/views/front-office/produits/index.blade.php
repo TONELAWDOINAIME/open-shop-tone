@@ -59,7 +59,7 @@
                                         
                                         <a class="btn btn-primary btn-sm mr-2" href="{{  route('produits.edit', $produit) }}" title="Modifier"><i class="fas fa-edit"></i></a>
 
-                                        <a onclick="event.preventDefault(); /* 20210428 : pour l'utilisation de sweetalert2 if(confirm('Êtes-vous sûr de vouloir supprimer ce produit ?')) document.getElementById('{{-- $produit->id --}}').submit();*/ delConfirm('{{ $produit->id }}');" class="btn btn-danger btn-sm" href="" title="Supprimer"><i class="fas fa-trash"></i></a>
+                                        <a onclick="event.preventDefault(); delConfirm('{{ $produit->id }}');" class="btn btn-danger btn-sm" href="" title="Supprimer"><i class="fas fa-trash"></i></a>
                                             <form id="{{ $produit->id }}" method="post" action="{{ route('produits.destroy', $produit) }}">                    
                                                 {{-- directive CSRF pour protéger les données du formulaire --}}
                                                 @csrf
